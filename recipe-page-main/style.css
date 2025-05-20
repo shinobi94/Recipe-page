@@ -1,0 +1,143 @@
+
+:root {
+--mobile-width: 375px;
+--desktop-width: 1440px;
+
+--White-100: hsl(0, 0%, 100%);
+--Stone-100: hsl(30, 54%, 90%);
+--Stone-150: hsl(30, 18%, 87%);
+--Stone-600: hsl(30, 10%, 34%);
+--Stone-900: hsl(24, 5%, 18%);
+--Brown-800: hsl(14, 45%, 36%);
+--Rose-800: hsl(332, 51%, 32%);
+--Rose-50: hsl(330, 47%, 94%);
+
+--base-font-size: 16px;
+
+  /* Font Families */
+--font-young-serif: 'Young Serif', serif;
+--font-outfit: 'Outfit', sans-serif;
+  
+  /* Font Weights */
+--font-weight-regular: 400;
+--font-weight-semi-bold: 600;
+--font-weight-bold: 700;
+}
+h1, h2, h3, h4, h5 {
+  font-weight: var(--font-weight-regular);
+  line-height: 1.8;
+  font-family: var(--font-young-serif);
+}
+
+body p {
+  font-size: 16px;
+  color: var(--Stone-600);
+}
+
+body {
+  font-family: var(--font-outfit);
+  font-weight: var(--font-weight-regular);
+  background-color: var(--Rose-50);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: white;
+    width: min(370px, 90%);
+    padding: 1.5rem clamp(1rem, 5%, 2rem);
+    margin: 2rem 0;
+    box-sizing: border-box;
+}
+
+.resized-image {
+  width: 100%;
+  border-radius: 10px;
+  max-width: 100%;
+}
+.prepare-time {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--Rose-50);
+}
+.prepare-time h4 {
+  color: var(--Rose-800);
+}
+
+h2 {
+  color: var(--Rose-800);
+}
+
+li {
+  padding-left: 1.5em;
+}
+
+li::marker {
+  color: var(--Rose-800);
+}
+
+ol, ul li{
+  color: var(--Stone-600);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background-color: lightgray;
+  margin: 1.5em 0; 
+}
+
+.mytable {
+  padding: 20px;
+  border-spacing: 10px;
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+}
+
+.mytable tr {
+  border-bottom: 1px solid var(--Stone-600);
+  line-height: 43px;
+  
+}
+
+.mytable td {
+  padding-left: 22px;
+}
+
+.mytable .tdl {
+  color: var(--Stone-600);
+}
+
+.mytable .tdr{
+  color: var(--Brown-800);
+  font-weight: var(--font-weight-bold);
+}
+
+tr:last-child {
+  border: none;
+}
+
+@media (max-width: 375px) {
+  .card {
+    border-radius: 0;
+    margin: 0;
+    position: relative;
+  }
+
+  body {
+    background-color: var(--White-100);
+    margin: 0;
+    display: flex;
+  }
+}
